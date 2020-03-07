@@ -3,6 +3,15 @@
 #include <ctype.h>
 /*
     Test function for finding the max value in array a[]
+
+    Issues:
+    - Does not handle return without data (i.e. empty \n)
+    - Cannot expand beyond 10 elements in a[]
+
+    Future:
+    - Dynamically expand a[] as count gets closer to current limit
+      - Not natively supported in C
+      - Possibly use malloc/realloc to generate new array
 */
 int main(){
     int a[10] = {0,0,0,0,0,0,0,0,0,0};
@@ -14,12 +23,11 @@ int main(){
         scanf(" %s", &t_val);
         if (!(t_val >= 'a' && t_val <='z')||!(t_val >= 'A' && t_val <= 'Z')) {
             a[count] = atoi(&t_val);
-            //printf("A value: %d\n", a[count]);
             count++;
             if (count == 10) {
                 break;
             }
-        } else if (t_val == 'd' || t_val == EOF){
+        } else if (t_val == 'd'){
             break;
         }
         else {
