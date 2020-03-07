@@ -14,9 +14,8 @@ int main(int argc, char *argv[]){
     int h2d = 8;
     int d2w = 5;
 
-    //variables
-    float ptostart = atoi(argv[1]);
-    float ptodate = atoi(argv[2]);
+    //user variables
+    
 
     printf("Arg 1 Function: %d\n", funct);
     printf("Arg 2 Person : %d\n", person);
