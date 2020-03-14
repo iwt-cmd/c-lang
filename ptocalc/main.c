@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "julian.h"
 /*
     PTO Calculator
 
@@ -13,11 +14,23 @@ int main(int argc, char *argv[]){
     float jlb_perpay = 6.5;
     int h2d = 8;
     int d2w = 5;
-
+    int month, day;
+    char date[7];
+    char i_m_d[6];
+    int count = 0;
     //user variables
+    printf("Input Date (mm-dd): ");
+    scanf("%c", i_m_d);
+
+    *token= strtok(i_m_d, "-");
+    while (token != NULL) {
+        date[i] = token;
+        token = strtok(NULL, "-");
+        count++;
+    }
     
 
-    printf("Arg 1 Function: %d\n", funct);
-    printf("Arg 2 Person : %d\n", person);
+    printf("Julian Date 040, 2-9: %d", juliandate(2, 9));
+    //printf("Georgian Date 040, 2-9: %c", georgiandate(40));
     return 0;
 }
