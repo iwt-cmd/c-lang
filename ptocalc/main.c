@@ -19,6 +19,7 @@ int main(int argc, char *argv[]){
     char i_m_d[6];
     int count = 0;
     //user variables
+    /*
     printf("Input Date (mm-dd): ");
     scanf("%c", i_m_d);
 
@@ -29,8 +30,8 @@ int main(int argc, char *argv[]){
         count++;
     }
     
-
-    printf("Julian Date 040, 2-9: %d", juliandate(2, 9));
+    */
+    printf("Julian Date 3-14: %d", juliandate(3, 14));
     //printf("Georgian Date 040, 2-9: %c", georgiandate(40));
     return 0;
 }
